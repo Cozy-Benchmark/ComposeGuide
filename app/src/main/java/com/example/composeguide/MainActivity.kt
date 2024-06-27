@@ -24,7 +24,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -71,56 +75,25 @@ class MainActivity : ComponentActivity() {
 //        )
         enableEdgeToEdge()
         setContent {
-            ComposeGuideTheme {
-                var textFieldState by remember {
-                    mutableStateOf("")
-                }
-
-                val snackbarHostState = remember {
-                    SnackbarHostState()
-                }
-
-                val scope = rememberCoroutineScope()
-
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    snackbarHost = { SnackbarHost(snackbarHostState) }
-                ) { paddingValues ->
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center,
+            LazyColumn {// Only Loads when it reaches that item
+                itemsIndexed( // with Index
+                    listOf<String>("This", "is", "Jetpack", "Composed")
+                ){
+                    index: Int, item: String ->
+                    Text(
+                        text = item,
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center,
                         modifier = Modifier
-                            .fillMaxSize()
-                            .padding(paddingValues)
-                            .padding(horizontal = 30.dp)
-                    ) {
-                        TextField(
-                            value = textFieldState,
-                            label = {
-                                Text(text = "Enter your Name")
-                            },
-                            onValueChange = {
-                                textFieldState = it
-                            },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Button(
-                            onClick = {
-                                scope.launch {
-                                    snackbarHostState.showSnackbar(
-                                        message = "Hello, $textFieldState!",
-                                        duration = SnackbarDuration.Short
-                                    )
-                                }
-                            }
-                        ) {
-                            Text(text = "Confirm")
-                        }
-                    }
+                            .fillMaxWidth()
+                            .padding(vertical = 24.dp)
+                    )
                 }
+//                items(5000) { // without index
+//                }
             }
+        }
     }
 }
 
@@ -253,6 +226,58 @@ fun state(){
 //    }
 }
 
+fun textInput(){
+//    ComposeGuideTheme {
+//        var textFieldState by remember {
+//            mutableStateOf("")
+//        }
+//
+//        val snackbarHostState = remember {
+//            SnackbarHostState()
+//        }
+//
+//        val scope = rememberCoroutineScope()
+//
+//        Scaffold(
+//            modifier = Modifier.fillMaxSize(),
+//            snackbarHost = { SnackbarHost(snackbarHostState) }
+//        ) { paddingValues ->
+//            Column(
+//                horizontalAlignment = Alignment.CenterHorizontally,
+//                verticalArrangement = Arrangement.Center,
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .padding(paddingValues)
+//                    .padding(horizontal = 30.dp)
+//            ) {
+//                TextField(
+//                    value = textFieldState,
+//                    label = {
+//                        Text(text = "Enter your Name")
+//                    },
+//                    onValueChange = {
+//                        textFieldState = it
+//                    },
+//                    singleLine = true,
+//                    modifier = Modifier.fillMaxWidth()
+//                )
+//                Spacer(modifier = Modifier.height(16.dp))
+//                Button(
+//                    onClick = {
+//                        scope.launch {
+//                            snackbarHostState.showSnackbar(
+//                                message = "Hello, $textFieldState!",
+//                                duration = SnackbarDuration.Short
+//                            )
+//                        }
+//                    }
+//                ) {
+//                    Text(text = "Confirm")
+//                }
+//            }
+//        }
+}
+
 @Composable
 fun ColorBox(
     modifier: Modifier = Modifier,
@@ -318,6 +343,4 @@ fun ImageCard (
 
         }
     }
-}
-
 }

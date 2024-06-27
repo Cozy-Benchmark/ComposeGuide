@@ -1,24 +1,35 @@
 
-dkotlin:S1128	"Remove this unused import.(Õ„´°ùÿÿÿÿ8€…Ã…2J$42b610e2-f95a-4174-8b6f-6ce04ad09370
-dkotlin:S1128"Remove this unused import.(Ù¯÷İüÿÿÿÿ8‘€…Ã…2J$de706f22-d730-41b6-90aa-c2b069693a4c
-_kotlin:S1128"Remove this unused import.(¤¯†8“€…Ã…2J$61549df1-37cc-428d-a74b-68b4170efcf3
-_kotlin:S1128"Remove this unused import.(ß¶İñ8€…Ã…2J$f4ea6056-4b01-49d4-aac8-2833bdba97b9
-dkotlin:S1128"Remove this unused import.(é¢êáüÿÿÿÿ8€…Ã…2J$d29350d3-385e-4f93-9ab5-97aff8d16c92
-dkotlin:S1128"Remove this unused import.(…Ìèœúÿÿÿÿ8€…Ã…2J$45d98b33-adb6-4b20-9312-f0e13cfd3d4c
-_kotlin:S1128"Remove this unused import.(§î€Š8€…Ã…2J$3615a4f2-dc46-4940-8b38-ec778b6665f6
-_kotlin:S1128"Remove this unused import.(¡ûã8€…Ã…2J$d547bc72-b5c9-403d-a34c-f52ad8294188
-_kotlin:S1128"Remove this unused import.(„ºö8€…Ã…2J$f87474f6-9b9b-4aa3-98ef-fbe6c8ca6b55
-_kotlin:S1128"Remove this unused import.(íåö8€…Ã…2J$d84cad76-3531-4d9b-80a4-68a11e90fad4
-_kotlin:S1128!"Remove this unused import.(ÕöÏ8€…Ã…2J$70c00211-1821-4ccb-bfcd-9ffa4c640539
-dkotlin:S11280"Remove this unused import.(‚ÅÎùúÿÿÿÿ8€…Ã…2J$eb251b64-1fa0-4975-8922-af5b1977a75f
-_kotlin:S11281"Remove this unused import.(î«ûÙ8ê€‡Ã…2J$5cb3a497-9873-4938-816e-b3a7b81c12ec
-^kotlin:S11283"Remove this unused import.(æËùI8€…Ã…2J$97837e6e-db79-4d25-a264-c7ede8c3b1f6
-_kotlin:S11284"Remove this unused import.(¤û“…8€…Ã…2J$e0d71654-243e-497d-bad2-6031eaa6efa4
-dkotlin:S11285"Remove this unused import.(À†ŠÔùÿÿÿÿ8€…Ã…2J$795f71a4-4f24-408b-8e06-6817072cd61c
-dkotlin:S11286"Remove this unused import.(û¬ã‚úÿÿÿÿ8€…Ã…2J$ffb4611c-c47a-4137-a8c0-ecf92c71c044
-dkotlin:S11287"Remove this unused import.(Â­¢Âùÿÿÿÿ8€…Ã…2J$34656367-b589-4dc4-a6ea-1b388b6ddb66
-_kotlin:S11288"Remove this unused import.(ôÄ¼ü8€…Ã…2J$503e0d0e-b9a2-49a1-995b-e9967a852cfb
-_kotlin:S11289"Remove this unused import.(†±Óê8€…Ã…2J$2e0824cd-415e-4a58-9c53-6acaa3cfa31f
-_kotlin:S1128:"Remove this unused import.(ä¸“Ê8€…Ã…2J$d5120536-a0f0-424a-9a49-2050853eaec9
-_kotlin:S1128;"Remove this unused import.(®©Ô”8ê€‡Ã…2J$eb0aa0a6-4853-41f7-96ee-285ff5606263
-kotlin:S100"YRename function "rows_and_columns" to match the regular expression ^[a-zA-Z][a-zA-Z0-9]*$(¦Üø8ê€‡Ã…2J$1be890d2-5314-47cf-9de4-d544dc283019
+‚kotlin:S1172R"8Use "_" instead of this unused lambda parameter "index".(ü™ãøÿÿÿÿ8î©·Ã…2J$78484b50-41ac-4ab6-b199-1f0388aed0fc
+dkotlin:S1128	"Remove this unused import.(Õ„´°ùÿÿÿÿ8•»±Ã…2J$b0b84b11-e595-4555-8c05-4c28c4c6ba3b
+dkotlin:S1128"Remove this unused import.(Ù¯÷İüÿÿÿÿ8•»±Ã…2J$3925c52e-07c0-4f34-815f-efe948cccad5
+_kotlin:S1128"Remove this unused import.(¤¯†8•»±Ã…2J$1dd8171e-bdb3-47b6-9755-dd4c2532fd50
+dkotlin:S1128"Remove this unused import.(µ¢«Ïúÿÿÿÿ8•»±Ã…2J$08d6cfea-8c66-4f88-b718-5f0577ee473a
+dkotlin:S1128"Remove this unused import.(û¢ËÓùÿÿÿÿ8•»±Ã…2J$2563af4f-b415-4c68-a428-4fb5e1a261bb
+_kotlin:S1128"Remove this unused import.(ß¶İñ8•»±Ã…2J$16716a0b-c08d-4858-b8ef-ad83080949c8
+dkotlin:S1128"Remove this unused import.(£ØØùÿÿÿÿ8•»±Ã…2J$5496cde4-8b6a-4806-9b66-93aed3164a7a
+dkotlin:S1128"Remove this unused import.(é¢êáüÿÿÿÿ8•»±Ã…2J$6ca5309a-39b8-4517-8110-bf958844f865
+dkotlin:S1128"Remove this unused import.(…Ìèœúÿÿÿÿ8•»±Ã…2J$30deb66f-1eaf-42db-a2f3-94ea5cd4ceb7
+_kotlin:S1128"Remove this unused import.(§î€Š8•»±Ã…2J$a3330e9f-da99-4ae4-adba-51833bcf0862
+_kotlin:S1128"Remove this unused import.(¡ûã8•»±Ã…2J$ccd47afd-d454-4658-a41e-d9bc55d23a85
+_kotlin:S1128"Remove this unused import.(„ºö8•»±Ã…2J$134a02f9-cb80-4a32-8df3-3aa1571a66e8
+_kotlin:S1128"Remove this unused import.(êåê±8•»±Ã…2J$f47b4314-bcd4-49d4-9921-85d8dd18649d
+dkotlin:S1128"Remove this unused import.(¢Ê†½üÿÿÿÿ8•»±Ã…2J$2233ab76-70d0-4b8c-92d0-ef2f98fa1e44
+_kotlin:S1128 "Remove this unused import.(¦ï½å8•»±Ã…2J$51215003-254a-46c9-a371-031fbac78dc1
+_kotlin:S1128#"Remove this unused import.(íåö8•»±Ã…2J$b464954e-2746-4603-ac6d-0bc362b9df26
+_kotlin:S1128$"Remove this unused import.(€Ğú¬8•»±Ã…2J$2efb6f8d-f1ec-4fc9-a420-43ec9cbe3e85
+_kotlin:S1128%"Remove this unused import.(ÕöÏ8•»±Ã…2J$220e9dbb-073c-4f97-885d-3254b79fc021
+^kotlin:S1128&"Remove this unused import.(¶›N8•»±Ã…2J$25407a80-b9dd-418b-a71d-9cb3e9a56dba
+_kotlin:S1128'"Remove this unused import.(øËÁ8•»±Ã…2J$13b31b0c-46cc-4d3f-9352-099933e87705
+_kotlin:S1128("Remove this unused import.(£¤8•»±Ã…2J$9692be49-58d7-4c6c-bcc1-9678d8b92635
+_kotlin:S1128*"Remove this unused import.(™éç8•»±Ã…2J$46a1666f-601c-4c92-be80-0e87ebcda94b
+dkotlin:S11284"Remove this unused import.(‚ÅÎùúÿÿÿÿ8•»±Ã…2J$0f2456dc-8f59-4880-a6f5-6b7f891aa773
+_kotlin:S11285"Remove this unused import.(î«ûÙ8•»±Ã…2J$1c45a8be-c4c0-4459-a673-e75e1fa47673
+^kotlin:S11287"Remove this unused import.(æËùI8•»±Ã…2J$5aa9cf57-21ad-4388-91fd-0808def2c99b
+_kotlin:S11288"Remove this unused import.(¤û“…8•»±Ã…2J$d55c1157-c590-48fa-9864-452b97e7d236
+dkotlin:S11289"Remove this unused import.(À†ŠÔùÿÿÿÿ8•»±Ã…2J$678d0b98-4b65-4dc2-a607-b1804c2f8acb
+dkotlin:S1128:"Remove this unused import.(û¬ã‚úÿÿÿÿ8•»±Ã…2J$21232bb2-a447-4b2d-857f-a92c88be08f2
+_kotlin:S1128="Remove this unused import.(†±Óê8•»±Ã…2J$66f02838-bb13-4c99-af07-f5684f6abbc0
+_kotlin:S1128>"Remove this unused import.(ä¸“Ê8•»±Ã…2J$7da52cab-6415-46b3-9673-28d0bc202b03
+_kotlin:S1128?"Remove this unused import.(®©Ô”8•»±Ã…2J$ba81ff57-ab74-4735-8bc1-389c3950f8f2
+dkotlin:S1128C"Remove this unused import.(£ñ¹¸ûÿÿÿÿ8•»±Ã…2J$fe0f20be-4c36-40af-9687-4e75c5175dbc
+kotlin:S100d"YRename function "rows_and_columns" to match the regular expression ^[a-zA-Z][a-zA-Z0-9]*$(¦Üø8•»±Ã…2J$67212e74-a0db-453f-ab99-ea810a3dd300
