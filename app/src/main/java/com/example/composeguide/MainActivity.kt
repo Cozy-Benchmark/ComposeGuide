@@ -38,7 +38,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,21 +56,18 @@ import com.example.composeguide.ui.theme.ComposeGuideTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val fontFamily = FontFamily(
+            Font(R.font.lexend_variablefont_wght)
+        )
         enableEdgeToEdge()
         setContent {
-            val painter = painterResource(id = R.drawable.kermit)
-            val title = "Kermit playing in the snow"
-            val description = "Kermit playing in the snow"
-            Box(modifier = Modifier
-                .fillMaxWidth(0.5f)
-                .padding(16.dp)){
-                ImageCard(
-                    painter = painter,
-                    contentDescription = description,
-                    title = title
-                )
-            }
-//          COLUMN
+
+        }
+    }
+}
+
+fun rows_and_columns(){
+//    COLUMN
 //              - horizontal = Alignment
 //              - vertical = Arrangement
 //            Column(
@@ -114,8 +120,58 @@ class MainActivity : ComponentActivity() {
 ////                Spacer(modifier = Modifier.height(50.dp)) // Creates Space
 ////                Text(text = "World")
 //            }
-        }
-    }
+}
+
+fun image(){
+//            val painter = painterResource(id = R.drawable.kermit)
+//            val title = "Kermit playing in the snow"
+//            val description = "Kermit playing in the snow"
+//            Box(modifier = Modifier
+//                .fillMaxWidth(0.5f)
+//                .padding(16.dp)){
+//                ImageCard(
+//                    painter = painter,
+//                    contentDescription = description,
+//                    title = title
+//                )
+//            }
+}
+
+fun text(){
+//               Box(modifier = Modifier
+//                .fillMaxSize()
+//                .background(Color(0xFF101010))
+//            ){
+//                Text(
+//                    text = buildAnnotatedString {
+//                        withStyle(
+//                            style = SpanStyle(
+//                                color = Color.Green,
+//                                fontSize = 50.sp
+//                            )
+//                        ){
+//                            append("J")
+//                        }
+//                        append("etpack ")
+//                        withStyle(
+//                            style = SpanStyle(
+//                                color = Color.Green,
+//                                fontSize = 50.sp
+//                            )
+//                        ){
+//                            append("C")
+//                        }
+//                        append("ompose")
+//                    },
+//                    color = Color.White,
+//                    fontSize = 30.sp,
+//                    fontFamily = fontFamily,
+//                    fontWeight = FontWeight.Bold,
+//                    fontStyle = FontStyle.Italic,
+//                    textAlign = TextAlign.Center,
+//                    textDecoration = TextDecoration.Underline
+//                )
+//            }
 }
 
 @Composable
