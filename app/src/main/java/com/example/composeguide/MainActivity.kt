@@ -25,14 +25,20 @@ import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Snackbar
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -54,35 +60,67 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composeguide.ui.theme.ComposeGuideTheme
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val fontFamily = FontFamily(
-            Font(R.font.lexend_variablefont_wght)
-        )
+//        val fontFamily = FontFamily(
+//            Font(R.font.lexend_variablefont_wght)
+//        )
         enableEdgeToEdge()
         setContent {
-            Column {
+            ComposeGuideTheme {
+                var textFieldState by remember {
+                    mutableStateOf("")
+                }
 
-                val color = remember {
-                    mutableStateOf(Color.Yellow)
+                val snackbarHostState = remember {
+                    SnackbarHostState()
                 }
-                ColorBox(
-                    Modifier
-                        .fillMaxSize()
-                        .weight(1f)
-                ){
-                    color.value = it
+
+                val scope = rememberCoroutineScope()
+
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    snackbarHost = { SnackbarHost(snackbarHostState) }
+                ) { paddingValues ->
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(paddingValues)
+                            .padding(horizontal = 30.dp)
+                    ) {
+                        TextField(
+                            value = textFieldState,
+                            label = {
+                                Text(text = "Enter your Name")
+                            },
+                            onValueChange = {
+                                textFieldState = it
+                            },
+                            singleLine = true,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Button(
+                            onClick = {
+                                scope.launch {
+                                    snackbarHostState.showSnackbar(
+                                        message = "Hello, $textFieldState!",
+                                        duration = SnackbarDuration.Short
+                                    )
+                                }
+                            }
+                        ) {
+                            Text(text = "Confirm")
+                        }
+                    }
                 }
-                Box(modifier = Modifier
-                    .background(color.value)
-                    .weight(1f).
-                    fillMaxSize()
-                )
             }
-        }
     }
 }
 
@@ -194,8 +232,25 @@ fun text(){
 //            }
 }
 
-fun color(){
-
+fun state(){
+//    Column {
+//
+//        val color = remember {
+//            mutableStateOf(Color.Yellow)
+//        }
+//        ColorBox(
+//            Modifier
+//                .fillMaxSize()
+//                .weight(1f)
+//        ){
+//            color.value = it
+//        }
+//        Box(modifier = Modifier
+//            .background(color.value)
+//            .weight(1f)
+//            .fillMaxSize()
+//        )
+//    }
 }
 
 @Composable
@@ -227,13 +282,13 @@ fun ImageCard (
     contentDescription: String,
     title: String,
     modifier: Modifier = Modifier
-){
+) {
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(15.dp),
         elevation = CardDefaults.cardElevation(5.dp)
     ) {
-        Box(modifier = Modifier.height(200.dp)){
+        Box(modifier = Modifier.height(200.dp)) {
             Image(
                 painter = painter,
                 contentDescription = contentDescription,
@@ -257,10 +312,12 @@ fun ImageCard (
                     .fillMaxSize()
                     .padding(12.dp),
                 contentAlignment = Alignment.BottomStart
-            ){
+            ) {
                 Text(title, style = TextStyle(color = Color.White, fontSize = 16.sp))
             }
 
         }
     }
+}
+
 }
