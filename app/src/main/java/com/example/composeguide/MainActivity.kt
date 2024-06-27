@@ -31,6 +31,8 @@ import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -52,6 +54,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composeguide.ui.theme.ComposeGuideTheme
+import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,7 +64,24 @@ class MainActivity : ComponentActivity() {
         )
         enableEdgeToEdge()
         setContent {
+            Column {
 
+                val color = remember {
+                    mutableStateOf(Color.Yellow)
+                }
+                ColorBox(
+                    Modifier
+                        .fillMaxSize()
+                        .weight(1f)
+                ){
+                    color.value = it
+                }
+                Box(modifier = Modifier
+                    .background(color.value)
+                    .weight(1f).
+                    fillMaxSize()
+                )
+            }
         }
     }
 }
@@ -172,6 +192,33 @@ fun text(){
 //                    textDecoration = TextDecoration.Underline
 //                )
 //            }
+}
+
+fun color(){
+
+}
+
+@Composable
+fun ColorBox(
+    modifier: Modifier = Modifier,
+    updateColor: (Color) -> Unit
+) {
+    val color = remember { // remember the state from the last composition
+        mutableStateOf(Color.Yellow)
+    }
+    Box(modifier = modifier
+        .background(color.value)
+        .clickable {
+            updateColor(
+                Color(
+                    Random.nextFloat(),
+                    Random.nextFloat(),
+                    Random.nextFloat(),
+                    1f
+                )
+            )
+        }
+    )
 }
 
 @Composable
